@@ -1,5 +1,5 @@
 //
-// Created by 庾金科 on 29/11/2017.
+// Created by Jack Yu on 29/11/2017.
 //
 #include "../include/SegmentationFreeRecognizer.h"
 #include "../include/Pipeline.h"
@@ -39,7 +39,7 @@ int main()
 //    cv::resize(image,image,cv::Size(160,40));
     cv::imshow("xxx",image);
     cv::waitKey(0);
-    pr::SegmentationFreeRecognizer recognizr("model/SegmentFreeModel.prototxt","model/InceptionV3.caffemodel");
+    pr::SegmentationFreeRecognizer recognizr("model/SegmenationFree-Inception.prototxt","model/ISegmenationFree-Inception.caffemodel");
     std::pair<std::string,float> res = recognizr.SegmentationFreeForSinglePlate(image,pr::CH_PLATE_CODE);
     std::cout<<res.first<<" "
                   <<res.second<<std::endl;
